@@ -674,6 +674,7 @@ bool COMXVideo::Open(OMXClock *clock, const OMXVideoConfig &config)
   float fAspect = m_config.hints.aspect ? (float)m_config.hints.aspect / (float)m_config.hints.width * (float)m_config.hints.height : 1.0f;
   m_pixel_aspect = fAspect / m_config.display_aspect;
 
+  PortSettingsChanged();
   return true;
 }
 
